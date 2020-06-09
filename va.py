@@ -1,4 +1,4 @@
-
+# Ce code est en anglais
  #Description : This is an VA that gets the date ,current  ,responds with a random greeting and return info on a person
 
 #importing libraries
