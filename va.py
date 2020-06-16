@@ -78,7 +78,7 @@ def getDate():
 	dayNum=now.day
 
 
-	 #A list of months
+	 # list of months
 
 
 	month_names=['January','February','Mars','April','May','June','July','August','September','October','November','December']
@@ -121,7 +121,7 @@ while True:
 		if('date' in text):
 			get_date=getDate()
 			response=response+' '+get_date
-		#check to see if the user said 'who is'
+		#check to see if  user said 'who is'
 		if('who is'in text):
 			person=getPerson(text)
 			wiki=wikipedia.summary(person,sentence=2)
