@@ -13,7 +13,7 @@ import random
 import wikipedia
 from playsound import playsound
 
-#ignore any warning message
+#ignore every  warning message
 warnings.filterwarnings('ignore')
 
 #Record audio and return it as as a string
