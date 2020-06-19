@@ -121,7 +121,7 @@ while True:
 		if('date' in text):
 			get_date=getDate()
 			response=response+' '+get_date
-		#check to see if  user said 'who is'
+		#check to see if  user is saying 'who is'
 		if('who is'in text):
 			person=getPerson(text)
 			wiki=wikipedia.summary(person,sentence=2)
