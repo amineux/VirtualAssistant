@@ -1,7 +1,8 @@
-# Les commentaires de ce code sont en anglais
- #Description : This is an VA that gets the date ,current  ,responds with a random greeting and return info on a person
 
-#importing libraries
+ #Description : Il s'agit d'une virtuelle assistante qui obtient la date d'aujourd'hui  et retourne la salutation ainsi que donne l'info sur une personnage à partir de wikipedia
+	and return info on a person
+
+#imprter les biblioteques
 
 import speech_recognition as sr
 import os
@@ -13,19 +14,19 @@ import random
 import wikipedia
 from playsound import playsound
 
-#ignore every  warning message
+#ignorer les messages de warning
 warnings.filterwarnings('ignore')
 
-#Record audio and return it as as a string
+#Enregistrer  l'audio and et le retourner comme un string
 def record_audio():
-	#Record the audio
+	#Enregistrer l'audio
 	r=sr.Recognizer()
-	#Starting the recording with microphone
+	#Commencer l'enregistrement avec un mcrophone
 	with sr.Microphone() as source:
 		print('Yo what up?')
 		audio =r.listen(source)
 
-	#Google recognition
+	#La recognition de Google
 	data = ''
 	try :
 		data = r.recognize_google(audio)
@@ -38,10 +39,10 @@ def record_audio():
 	return data	
 
 
-#record_audio(command)
+#record_audio(commande)
 
 
-#VA response function
+#La fonction de réponse de VA 
 
 def AssistantResponse(text):
 	print(text)
@@ -57,7 +58,7 @@ text ='This is a test'
 AssistantResponse(text)
 
 
-# Function for wake or phrase
+# La fonction pour la réveiller
 
 def wakeWord(text):
 	 WAKE_WORDS=['yo computer','ok computer']#Liste pour réveiller 
@@ -66,7 +67,7 @@ def wakeWord(text):
 	 for  phrase in WAKE_WORDS:
 	 	if phrase in text :
 	 		return True
-	 #Si les wake word n'est pas trouvé dans le text dans la boucle donc on retourne False
+	 #Si les wake word(mots pour réveiller) n'est pas trouvé dans le text dans la boucle donc on retourne False
 	 return False
 
 	 #Fonction pour obtenir la date
@@ -78,20 +79,20 @@ def getDate():
 	dayNum=now.day
 
 
-	 # list of months
+	 # liste des mois
 
 
 	month_names=['January','February','Mars','April','May','June','July','August','September','October','November','December']
-	 #A List of ordinal numbers
+	 # Liste des nombres ordinal 
 	ordinalNumbers=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st']
 	return 'Today is ' +weekday+' '+month_names[monthNum-1]+' the '+ordinalNumbers[dayNum-1] +  '.'
 
 
 
 
-#print(getDate())
+# la fonction print(getDate())
 
-#Function to return a random greeting response
+#La fonction qui retourne une salutation aléatoire
 
 def greeting(text):
 	Greeting_INPUT=['yo','hello','hey','hola','greetings','wassup']
@@ -113,21 +114,21 @@ while True:
 	response=''
 
 
-	#check for the word/phrase
+	#checker pour le mot/phrase
 	if(wakeWord(text)==True):
-		#check for greeting
+		#checker pour une salutation
 		response=response+greeting(text)
 		#check to see if he wants date
 		if('date' in text):
 			get_date=getDate()
 			response=response+' '+get_date
-		#check to see if  user is saying 'who is'
+		#checker pour voir  si l'utiisateur utilise 'who is'
 		if('who is'in text):
 			person=getPerson(text)
 			wiki=wikipedia.summary(person,sentence=2)
 			response=response+' '+wiki
 
-		#Have the assistant respond back using audio and the next from response
+		#L'assistante répond avec l'audio de la prochaine réponse
 		AssistantResponse(response)
 
 
