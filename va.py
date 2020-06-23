@@ -1,7 +1,5 @@
-
  #Description : Il s'agit d'une virtuelle assistante qui obtient la date d'aujourd'hui  et retourne la salutation ainsi que donne l'info sur une personnage à partir de wikipedia
-	and return info on a person
-
+	
 #imprter les biblioteques
 
 import speech_recognition as sr
