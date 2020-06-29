@@ -2,7 +2,7 @@
 	
 #imprter les biblioteques
 
-import speech_recognition as sr   #bib de la recognition vocale
+import speech_recognition as sr   #la bibliotheque de la recognition vocale
 import os
 from gtts import gTTS
 import datetime
