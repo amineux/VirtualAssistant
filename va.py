@@ -4,8 +4,8 @@
 
 import speech_recognition as sr   #la bibliothèque de la recognition vocale
 import os
-from gtts import gTTS
-import datetime
+from gtts import gTTS 
+import datetime   #importer la date
 import warnings
 import calendar 
 import random 
