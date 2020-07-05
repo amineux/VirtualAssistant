@@ -6,7 +6,7 @@ import speech_recognition as sr   #la bibliothèque de la recognition vocale
 import os
 from gtts import gTTS 
 import datetime   #importer la date
-import warnings
+import warnings   #importer les erreurs
 import calendar 
 import random 
 import wikipedia
