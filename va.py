@@ -7,7 +7,7 @@ import os
 from gtts import gTTS 
 import datetime   #importer la date
 import warnings   #importer les erreurs
-import calendar 
+import calendar #importer le calendrier
 import random 
 import wikipedia
 from playsound import playsound
