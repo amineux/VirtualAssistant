@@ -8,8 +8,8 @@ from gtts import gTTS
 import datetime   #importer la date
 import warnings   #importer les erreurs
 import calendar #importer le calendrier
-import random 
-import wikipedia
+import random  
+import wikipedia #imprter librairie wiki
 from playsound import playsound
 
 #ignorer les messages de warning
