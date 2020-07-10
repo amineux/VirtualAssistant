@@ -8,7 +8,7 @@ from gtts import gTTS
 import datetime   #importer la date
 import warnings   #importer les erreurs
 import calendar #importer le calendrier
-import random  #importer random pour creer des valeurs aléatoirew
+import random  #importer random pour creer des valeurs aléatoires
 import wikipedia #imprter librairie wiki
 from playsound import playsound
 
