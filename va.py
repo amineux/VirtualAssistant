@@ -4,7 +4,7 @@
 
 import speech_recognition as sr   #la bibliothèque de la recognition vocale
 import os
-from gtts import gTTS 
+from gtts import gTTS #outil pour le conversion d'un speech à un text
 import datetime   #importer la date
 import warnings   #importer les erreurs
 import calendar #importer le calendrier
